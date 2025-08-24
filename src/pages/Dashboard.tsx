@@ -28,6 +28,7 @@ import { AIChatSystem } from "@/components/AIChatSystem";
 import { VoiceChatSystem } from "@/components/VoiceChatSystem";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import weatherWiseLogo from "@/assets/aurasphere-logo.png";
+import dashboardBackground from "@/assets/dashboard-background.jpg";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -121,9 +122,15 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 glass-panel border-b border-white/10">
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${dashboardBackground})`
+      }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background/95" />
+      
+      <div className="relative z-10">
+        {/* Navigation */}
+        <nav className="fixed top-0 left-0 right-0 z-40 glass-panel border-b border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -336,10 +343,11 @@ const Dashboard = () => {
         <AIChatSystem onClose={() => setShowAIChat(false)} selectedProfile={selectedProfile} />
       )}
 
-      {/* Voice Chat Modal */}
-      {showVoiceChat && (
-        <VoiceChatSystem onClose={() => setShowVoiceChat(false)} />
-      )}
+        {/* Voice Chat Modal */}
+        {showVoiceChat && (
+          <VoiceChatSystem onClose={() => setShowVoiceChat(false)} />
+        )}
+      </div>
     </div>
   );
 };
