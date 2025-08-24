@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Globe, Map, Users, Zap, Shield, BarChart3, Satellite, Eye, Brain, ChevronRight, Play, Calendar, Mountain, Wheat, Settings, User, MessageSquare, Mic } from "lucide-react";
 import heroWeather from "@/assets/hero-weather.jpg";
-import weatherWiseLogo from "@/assets/aurasphere-logo.png";
+import weatherWiseLogo from "@/assets/weather-logo.png";
 import nasaSatellite from "@/assets/nasa-satellite.jpg";
 import aiWeatherBrain from "@/assets/ai-weather-brain.jpg";
 import weatherDashboard from "@/assets/weather-dashboard.jpg";
