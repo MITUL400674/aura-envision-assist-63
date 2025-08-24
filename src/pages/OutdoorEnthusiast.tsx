@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mountain, Thermometer, Wind, Sun, Droplets, ArrowLeft, MapPin, Calendar, TrendingUp } from "lucide-react";
 import weatherWiseLogo from "@/assets/aurasphere-logo.png";
+import outdoorHero from "@/assets/outdoor-enthusiast-hero.jpg";
 
 const OutdoorEnthusiast = () => {
   const weatherMetrics = [
@@ -88,8 +89,13 @@ const OutdoorEnthusiast = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-16 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: `url(${outdoorHero})`
+        }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/90" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6">
               <Mountain className="h-8 w-8 text-white" />
