@@ -10,6 +10,9 @@ import nasaSatellite from "@/assets/nasa-satellite.jpg";
 import aiWeatherBrain from "@/assets/ai-weather-brain.jpg";
 import weatherDashboard from "@/assets/weather-dashboard.jpg";
 import climateAnalytics from "@/assets/climate-analytics.jpg";
+import featuresBackground from "@/assets/features-background.jpg";
+import aiFeaturesBackground from "@/assets/ai-features-background.jpg";
+import ctaBackground from "@/assets/cta-background.jpg";
 import { AIChatSystem } from "@/components/AIChatSystem";
 import { VoiceChatSystem } from "@/components/VoiceChatSystem";
 import ShareWeather from "@/components/ShareWeather";
@@ -171,8 +174,12 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-32">
-        <div className="container mx-auto px-6">
+      <section id="features" className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: `url(${featuresBackground})`
+        }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background/95" />
+        <div className="relative z-10 container mx-auto px-6">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Badge variant="outline" className="bg-gradient-aurora text-white border-white/20 px-4 py-2">
@@ -287,8 +294,12 @@ const Index = () => {
       </section>
 
       {/* AI Features Showcase */}
-      <section className="py-32 bg-background/30">
-        <div className="container mx-auto px-6">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: `url(${aiFeaturesBackground})`
+        }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background/95" />
+        <div className="relative z-10 container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-6">AI-Powered Weather Assistance</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -339,8 +350,12 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32">
-        <div className="container mx-auto px-6">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: `url(${ctaBackground})`
+        }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90" />
+        <div className="relative z-10 container mx-auto px-6">
           <Card className="glass-card p-12 text-center max-w-4xl mx-auto border-primary/30">
             <h2 className="text-3xl font-bold mb-4">Ready for Perfect Weather Planning?</h2>
             <p className="text-xl text-muted-foreground mb-8">
