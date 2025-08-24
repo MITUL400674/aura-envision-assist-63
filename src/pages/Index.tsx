@@ -12,6 +12,7 @@ import weatherDashboard from "@/assets/weather-dashboard.jpg";
 import climateAnalytics from "@/assets/climate-analytics.jpg";
 import { AIChatSystem } from "@/components/AIChatSystem";
 import { VoiceChatSystem } from "@/components/VoiceChatSystem";
+import ShareWeather from "@/components/ShareWeather";
 const Index = () => {
   console.log("WeatherWise Index component loaded successfully!");
   const navigate = useNavigate();
@@ -80,6 +81,7 @@ const Index = () => {
                 <Globe className="w-4 h-4 mr-2" />
                 Climate Globe
               </Button>
+              <ShareWeather location="Your Location" />
               <Button variant="cosmic" size="sm" onClick={() => setShowAIChat(true)}>
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Weather AI
